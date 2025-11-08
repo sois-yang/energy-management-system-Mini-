@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理端 - 宿舍水电使用统计与提醒系统</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="../logo.png" alt="Logo" id="logo">
+            <h1>宿舍水电使用监控 - 管理端</h1>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">能耗数据</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li><a href="#">报告</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="dashboard">
+            <h2>全校能耗概览</h2>
+            <canvas id="energyChart"></canvas>
+        </div>
+
+        <div class="user-list">
+            <h3>用户数据</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>电力消耗</th>
+                        <th>热水消耗</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>学生A</td>
+                        <td>20 kWh</td>
+                        <td>10 L</td>
+                    </tr>
+                    <tr>
+                        <td>学生B</td>
+                        <td>25 kWh</td>
+                        <td>12 L</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 能源管理系统</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

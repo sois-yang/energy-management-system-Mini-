@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生端 - 宿舍水电使用统计与提醒系统</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="../logo.png" alt="Logo" id="logo">
+            <h1>宿舍水电使用监控</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="energy-dashboard">
+            <div class="data-card">
+                <h2>电力消耗</h2>
+                <p id="electricity-usage">0 kWh</p>
+                <button onclick="updateUsage()">更新数据</button>
+            </div>
+            <div class="data-card">
+                <h2>热水消耗</h2>
+                <p id="water-usage">0 L</p>
+            </div>
+        </div>
+
+        <div class="goal-setting">
+            <h3>设置节能目标</h3>
+            <input type="number" id="goal" placeholder="输入目标 (kWh)">
+            <button onclick="setGoal()">设定目标</button>
+        </div>
+
+        <div class="chart-container">
+            <h3>电力消耗趋势</h3>
+            <canvas id="energyChart"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 能源管理系统</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
